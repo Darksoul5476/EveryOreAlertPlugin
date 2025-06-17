@@ -1,0 +1,49 @@
+name: EveryOreAlert
+main: com.dark.EveryOreAlert
+version: 1.0
+api-version: 1.20
+author: Darksoul
+description: Alerts OPs when any ore is mined, tracks streaks and totals, provides admin/group alert commands, and utility commands for OPs
+
+commands:
+  alert:
+    description: Admin alert commands (warn, ban, unban, kick, group management, group messaging, streaks, block alerts)
+    usage: /alert <warn|ban|unban|kick|add group|delete group|msg|group join|group leave|block> ...
+    permission: everyorealert.alert
+    aliases: [ea, everyalert]
+  fly:
+    description: Enable flight for yourself (OP only)
+    usage: /fly
+    permission: everyorealert.utility.fly
+  disfly:
+    description: Disable flight for yourself (OP only)
+    usage: /disfly
+    permission: everyorealert.utility.disfly
+  heal:
+    description: Heal yourself to full (OP only)
+    usage: /heal
+    permission: everyorealert.utility.heal
+  feed:
+    description: Fill your hunger and saturation (OP only)
+    usage: /feed
+    permission: everyorealert.utility.feed
+
+permissions:
+  everyorealert.alert:
+    description: Allows use of all /alert commands
+    default: op
+  everyorealert.utility:
+    description: Allows use of all utility commands
+    default: op
+  everyorealert.utility.fly:
+    description: Allows use of /fly
+    default: op
+  everyorealert.utility.disfly:
+    description: Allows use of /disfly
+    default: op
+  everyorealert.utility.heal:
+    description: Allows use of /heal
+    default: op
+  everyorealert.utility.feed:
+    description: Allows use of /feed
+    default: op

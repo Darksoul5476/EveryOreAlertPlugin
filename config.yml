@@ -1,0 +1,146 @@
+# EveryOreAlert Configuration
+
+# =========================
+# Message Settings
+# =========================
+
+# Message sent to OPs when a player finds an ore.
+# Placeholders: %player% = player name, %amount% = streak amount, %ore% = ore name, %total% = total of that ore mined
+alert-message: "&b[ALERT] &e%player% has found %amount%%x %ore%! (Total: %total% %ore% mined)"
+
+# Message sent to OPs when a player breaks a custom alert block.
+# Placeholders: %player% = player name, %block% = block name
+custom-block-alert-message: "&d[BLOCK ALERT] &e%player% broke %block%"
+
+# Message sent to a player when they use /fly
+fly-enabled-message: "&aFlight enabled!"
+
+# Message sent to a player when they use /disfly
+fly-disabled-message: "&cFlight disabled!"
+
+# Message sent to a player when they use /heal
+heal-message: "&aYou have been healed!"
+
+# Message sent to a player when they use /feed
+feed-message: "&aYou have been fed!"
+
+# Message sent to a player when they lack permission for a command
+no-permission-message: "&cYou do not have permission to use this command."
+
+# Message sent to a player when only players can use a command
+only-player-message: "&cOnly players can use this command."
+
+# Message sent to a player when they join a group
+group-join-message: "&aYou have joined group '&e%group%&a'."
+
+# Message sent to a player when they leave a group
+group-leave-message: "&aYou have left group '&e%group%&a'."
+
+# Message sent to a player when they are already in a group
+already-in-group-message: "&cYou are already in group '&e%group%&c'."
+
+# Message sent to a player when they are not in a group
+not-in-group-message: "&cYou are not in group '&e%group%&c'."
+
+# Message sent to a player when a group does not exist
+group-not-exist-message: "&cGroup '&e%group%&c' does not exist."
+
+# Message sent to a player when a group is created
+group-created-message: "&aGroup '&e%group%&a' added."
+
+# Message sent to a player when a group is deleted
+group-deleted-message: "&aGroup '&e%group%&a' deleted."
+
+# Message sent to a player when a group already exists
+group-exists-message: "&cGroup '&e%group%&c' already exists."
+
+# Message sent to a player when a message is sent to a group
+group-message-sent: "&aMessage sent to &e%count% &aplayer(s) in group '&e%group%&a'."
+
+# Message sent to group members when they receive a group message
+group-message-received: "&b[Group: %group%] &f%message%"
+
+# Message sent to a player when they are warned
+warn-message: "&eYou have been warned: %reason%"
+
+# Message sent to a player when they are banned
+ban-message: "&cYou have been banned: %reason%"
+
+# Message sent to a player when they are kicked
+kick-message: "&cYou have been kicked: %reason%"
+
+# Message sent to the command sender when they warn a player
+warn-sender-message: "&aWarned %player%."
+
+# Message sent to the command sender when they ban a player
+ban-sender-message: "&aBanned %player%."
+
+# Message sent to the command sender when they unban a player
+unban-sender-message: "&aUnbanned %player%."
+
+# Message sent to the command sender when they kick a player
+kick-sender-message: "&aKicked %player%."
+
+# Message sent to OPs when an admin command is executed (warn, ban, unban, kick)
+admin-alert-message: "&c[ALERT] &e%sender% issued %action% to %player%: %reason%"
+
+# Message sent when a player is not found
+player-not-found-message: "&cPlayer not found."
+
+# Message sent when a command is used incorrectly
+usage-message: "&cUsage: %usage%"
+
+# =========================
+# Feature Toggles
+# =========================
+
+announce-to-console: false
+track-ore-totals: true
+enable-groups: true
+enable-admin-commands: true
+
+# =========================
+# Ores and Blocks
+# =========================
+
+# List of ores to track (by Bukkit Material name)
+ores:
+  - COAL_ORE
+  - DEEPSLATE_COAL_ORE
+  - COPPER_ORE
+  - DEEPSLATE_COPPER_ORE
+  - IRON_ORE
+  - DEEPSLATE_IRON_ORE
+  - GOLD_ORE
+  - DEEPSLATE_GOLD_ORE
+  - REDSTONE_ORE
+  - DEEPSLATE_REDSTONE_ORE
+  - LAPIS_ORE
+  - DEEPSLATE_LAPIS_ORE
+  - DIAMOND_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - EMERALD_ORE
+  - DEEPSLATE_EMERALD_ORE
+  - NETHER_GOLD_ORE
+  - NETHER_QUARTZ_ORE
+  - ANCIENT_DEBRIS
+
+# List of custom blocks to alert on (by Bukkit Material name)
+custom-alert-blocks:
+  - Ruby_Ore
+  - Onyx_Ore
+	
+	
+	
+# =========================
+# Utility Commands
+# =========================
+
+utility-commands:
+  enable-fly: true
+  enable-disfly: true
+  enable-heal: true
+  enable-feed: true
+
+# Cooldown for /fly, /heal, /feed, etc. (in seconds, 0 = no cooldown)
+utility-cooldown: 0
